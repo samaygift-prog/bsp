@@ -323,3 +323,14 @@ def download_excel():
         filename,
         filename="User_Data.xlsx"
     )
+
+    @app.get("/clear-data")
+def clear_data():
+
+    with engine.connect() as conn:
+        conn.execute(text("DELETE FROM entries"))
+        conn.commit()
+
+    return {
+        "message": "All data deleted successfully"
+    }
