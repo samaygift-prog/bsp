@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>SINDHI SAMAJ HEALTH PORTAL BILASPUR - Entry Form</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="main-container">
+
+
+    <!-- Left Photo -->
+
+    <img src="/static/left.jpeg" class="side-photo">
+
+
+
+    <!-- Form Box -->
+
+    <div class="form-box">
+
+
+        <h1>
+           <h1>SINDHI SAMAJ DIGITAL BILASPUR</h1>
+        </h1>
+
+
+
+        <form action="/save-entry" method="post">
+
+
+            <label>Name</label>
+
+            <input type="text" name="name" required>
+
+
+
+            <label>Mobile Number</label>
+
+            <input type="text"
+                   name="mobile"
+                   maxlength="10"
+                   placeholder="Enter 10 digit mobile number"
+                   required>
+
+
+
+            <label>Problem</label>
+
+            <textarea name="problem" required></textarea>
+
+
+
+            <label>Medical History</label>
+
+            <textarea name="medical_history"></textarea>
+
+
+
+            <label>Talent</label>
+
+            <textarea name="talent"></textarea>
+
+
+
+            <label>Profession</label>
+
+            <textarea name="profession"></textarea>
+
+
+
+            <label>Second Hand Product</label>
+
+            <textarea name="second_hand_product"></textarea>
+
+
+
+            <button type="submit">
+                Save Data
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+
+    <!-- Right Photo -->
+
+    <img src="/static/right.jpg" class="side-photo">
+
+
+</div>
+
+
+</body>
+
+</html>

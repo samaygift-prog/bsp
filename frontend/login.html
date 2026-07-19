@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+</head>
+
+<body>
+
+<h2>BSP Admin Login</h2>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+
+    let password = document.getElementById("password").value;
+
+    if (password === "12345") {
+
+        window.location.href = "admin.html";
+
+    } else {
+
+        alert("Wrong Password");
+
+    }
+
+}
+</script>
+
+</body>
+</html>

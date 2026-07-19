@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>SINDHI SAMAJ DIGITAL</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+}
+
+
+.header{
+
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    margin-bottom:25px;
+
+}
+
+
+.card{
+
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    overflow:auto;
+
+}
+
+
+h1{
+
+    margin:0;
+    font-size:26px;
+
+}
+
+
+h2{
+
+    color:#444;
+
+}
+
+
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+
+
+th{
+
+    background:#4b0082;
+    color:white;
+    padding:12px;
+
+}
+
+
+
+td{
+
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+
+}
+
+
+tr:nth-child(even){
+
+    background:#f8f8f8;
+
+}
+
+
+
+button{
+
+    background:#4b0082;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#6a0dad;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+<h1>
+SINDHI SAMAJ HEALTH PORTAL BILASPUR
+</h1>
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+All User Data
+</h2>
+
+
+<a href="/download-excel">
+
+<button>
+Download Excel
+</button>
+
+</a>
+
+
+
+<table>
+
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Problem</th>
+<th>Medical History</th>
+<th>Talent</th>
+<th>Profession</th>
+<th>Second Hand Product</th>
+
+</tr>
+
+
+
+{% for row in data %}
+
+<tr>
+
+<td>{{row[0]}}</td>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+<td>{{row[5]}}</td>
+<td>{{row[6]}}</td>
+<td>{{row[7]}}</td>
+
+
+</tr>
+
+
+{% endfor %}
+
+
+</table>
+
+
+</div>
+
+
+</body>
+
+</html>
