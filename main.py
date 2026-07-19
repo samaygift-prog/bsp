@@ -272,7 +272,6 @@ def data_page(request: Request):
 @app.get("/download-excel")
 def download_excel():
 
-
     with engine.connect() as conn:
 
         result = conn.execute(
@@ -281,18 +280,13 @@ def download_excel():
 
         rows = result.fetchall()
 
-
-
     filename = "User_Data.xlsx"
-
 
     wb = Workbook()
 
     ws = wb.active
 
     ws.title = "User Data"
-
-
 
     ws.append(
         [
@@ -307,24 +301,18 @@ def download_excel():
         ]
     )
 
-
-
     for row in rows:
-
         ws.append(list(row))
 
-
-
     wb.save(filename)
-
-
 
     return FileResponse(
         filename,
         filename="User_Data.xlsx"
     )
 
-    @app.get("/clear-data")
+
+@app.get("/clear-data")
 def clear_data():
 
     with engine.connect() as conn:
